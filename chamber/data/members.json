@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Table Mountain Adventures",
+      "address": "Cape Town City Centre",
+      "phonenumber": "021-555-0101",
+      "url": "https://tablemountainadventures.co.za",
+      "image": "images/table-mountain.jpg",
+      "membershiplevel": 3,
+      "email": "info@tablemountainadventures.co.za"
+    },
+    {
+      "name": "Cape Tech Solutions",
+      "address": "Gardens, Cape Town",
+      "phonenumber": "021-555-0202",
+      "url": "https://capetechsolutions.co.za",
+      "image": "images/cape-tech.jpg",
+      "membershiplevel": 2,
+      "email": "contact@capetechsolutions.co.za"
+    },
+    {
+      "name": "Atlantic Seafood Co.",
+      "address": "Waterfront, Cape Town",
+      "phonenumber": "021-555-0303",
+      "url": "https://atlanticseafood.co.za",
+      "image": "images/atlantic-seafood.jpg",
+      "membershiplevel": 1,
+      "email": "sales@atlanticseafood.co.za"
+    },
+    {
+      "name": "Cape Town Finance Hub",
+      "address": "Claremont, Cape Town",
+      "phonenumber": "021-555-0404",
+      "url": "https://capetownfinancehub.co.za",
+      "image": "images/cape-finance.jpg",
+      "membershiplevel": 3,
+      "email": "hello@capetownfinancehub.co.za"
+    },
+    {
+      "name": "Green Earth Landscaping",
+      "address": "Rondebosch, Cape Town",
+      "phonenumber": "021-555-0505",
+      "url": "https://greenearthlandscaping.co.za",
+      "image": "images/green-earth.jpg",
+      "membershiplevel": 2,
+      "email": "info@greenearthlandscaping.co.za"
+    },
+    {
+      "name": "Signal Hill Tours",
+      "address": "Signal Hill, Cape Town",
+      "phonenumber": "021-555-0606",
+      "url": "https://signalhilltours.co.za",
+      "image": "images/signal-hill.jpg",
+      "membershiplevel": 1,
+      "email": "bookings@signalhilltours.co.za"
+    },
+    {
+      "name": "Cape Creative Media",
+      "address": "Sea Point, Cape Town",
+      "phonenumber": "021-555-0707",
+      "url": "https://capecreativemedia.co.za",
+      "image": "images/cape-creative.jpg",
+      "membershiplevel": 3,
+      "email": "contact@capecreativemedia.co.za"
+    }
+  ]
+}

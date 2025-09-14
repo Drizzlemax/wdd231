@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cape Town Chamber of Commerce</title>
+    <meta name="author" content="Desmond Chibanda">
+    <meta name="description" content="Official website of the Cape Town Chamber of Commerce, providing business resources, networking opportunities, and local economic updates.">
+    <meta name="keywords" content="Cape Town, Chamber of Commerce, Business, Networking, Trade, South Africa">
+    <link rel="stylesheet" href="styles/directory.css">
+</head>
+<body>
+    <!-- ============================= HEADER ============================= -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Cape Town Chamber of Commerce</h1>
+                <p>Driving Growth, Investment and Trade</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================= MAIN ============================= -->
+    <main>
+
+        <!-- ================= HERO SECTION ================= -->
+        <section class="hero">
+            <div class="container">
+                <h2>Welcome to Cape Town's Business Community</h2>
+                <p>Connecting businesses for growth and prosperity in the Western Cape</p>
+                <button class="cta-button">Join Our Chamber</button>
+            </div>
+        </section>
+
+        <!-- ================= WEATHER SECTION ================= -->
+        <section class="weather-section">
+            <div class="container">
+                <h2>Current Weather</h2>
+                <div class="weather-card">
+                    <div class="temp">24° C</div>
+                    <div class="condition">Partly Cloudy</div>
+                    <div class="details">
+                        <p>High: 29° C</p>
+                        <p>Low: 11° C</p>
+                        <p>Humidity: 34%</p>
+                        <p>Sunrise: 7:30am</p>
+                        <p>Sunset: 9:59pm</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FORECAST SECTION ================= -->
+        <section class="forecast-section">
+            <div class="container">
+                <h2>Weather Forecast</h2>
+                <div class="forecast-cards">
+                    <div class="forecast-card">
+                        <h3>Monday</h3>
+                        <p class="temp">24° C</p>
+                        <p class="condition">Partly Cloudy</p>
+                    </div>
+                    <div class="forecast-card">
+                        <h3>Tuesday</h3>
+                        <p class="temp">26° C</p>
+                        <p class="condition">Sunny</p>
+                    </div>
+                    <div class="forecast-card">
+                        <h3>Wednesday</h3>
+                        <p class="temp">22° C</p>
+                        <p class="condition">Rainy</p>
+                    </div>
+                    <div class="forecast-card">
+                        <h3>Thursday</h3>
+                        <p class="temp">23° C</p>
+                        <p class="condition">Cloudy</p>
+                    </div>
+                    <div class="forecast-card">
+                        <h3>Friday</h3>
+                        <p class="temp">25° C</p>
+                        <p class="condition">Sunny</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BUSINESS / MEMBER DIRECTORY ================= -->
+        <section class="business-section">
+            <div class="container">
+                <h2>Featured Businesses</h2>
+
+                <!-- Toggle buttons for Grid/List view -->
+                <div class="view-toggle">
+                    <button id="gridViewBtn">Grid View</button>
+                    <button id="listViewBtn">List View</button>
+                </div>
+
+                <!-- Container where JS will inject member cards -->
+                <div class="members grid">
+                    <!-- JavaScript will dynamically fill this with member cards -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT SECTION ================= -->
+        <section class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-card">
+                    <h3>Cape Town Chamber of Commerce</h3>
+                    <p>10 Rue De La Paix</p>
+                    <p>Cape Town, Western Cape 8001</p>
+                    <p>info@capetowncc.org</p>
+                    <p>(021) 555-2300</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="container">
+            <p>WDD231 Class Project</p>
+            <p>Desmond Chibanda</p>
+            <p>© 2025 Cape Town Chamber of Commerce</p>
+            <p id="lastModified">Last Modification: </p>
+        </div>
+    </footer>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="scripts/directory.js"></script>
+</body>
+</html>

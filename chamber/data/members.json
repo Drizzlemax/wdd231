@@ -5,7 +5,7 @@
       "address": "Cape Town City Centre",
       "phonenumber": "021-555-0101",
       "url": "https://tablemountainadventures.co.za",
-      "image": "images/table-mountain.jpg",
+      "image": "images/Table-Mountain_20250920_210907_0000.png",
       "membershiplevel": 3,
       "email": "info@tablemountainadventures.co.za"
     },
@@ -14,7 +14,7 @@
       "address": "Gardens, Cape Town",
       "phonenumber": "021-555-0202",
       "url": "https://capetechsolutions.co.za",
-      "image": "images/cape-tech.jpg",
+      "image": "images/CAPETECH_20250920_211248_0000.png",
       "membershiplevel": 2,
       "email": "contact@capetechsolutions.co.za"
     },
@@ -41,7 +41,7 @@
       "address": "Rondebosch, Cape Town",
       "phonenumber": "021-555-0505",
       "url": "https://greenearthlandscaping.co.za",
-      "image": "images/green-earth.jpg",
+      "image": "images/Green-Earth_20250920_212353_0000.png",
       "membershiplevel": 2,
       "email": "info@greenearthlandscaping.co.za"
     },
@@ -50,7 +50,7 @@
       "address": "Signal Hill, Cape Town",
       "phonenumber": "021-555-0606",
       "url": "https://signalhilltours.co.za",
-      "image": "images/signal-hill.jpg",
+      "image": "images/Signal-Hill_20250920_212703_0000.png",
       "membershiplevel": 1,
       "email": "bookings@signalhilltours.co.za"
     },
@@ -59,7 +59,7 @@
       "address": "Sea Point, Cape Town",
       "phonenumber": "021-555-0707",
       "url": "https://capecreativemedia.co.za",
-      "image": "images/cape-creative.jpg",
+      "image": "images/Cape Creative_20250920_213139_0000.png",
       "membershiplevel": 3,
       "email": "contact@capecreativemedia.co.za"
     }

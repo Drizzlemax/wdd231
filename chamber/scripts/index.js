@@ -1,6 +1,6 @@
 // WEATHER SECTION
 async function fetchWeather() {
-  const apiKey = "YOUR_OPENWEATHERMAP_API_KEY";
+  const apiKey = "d253a27be815c025821678be33b76786";
   const city = "Cape Town,ZA";
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
 

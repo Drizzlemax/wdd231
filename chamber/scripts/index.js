@@ -1,10 +1,14 @@
 // ================================
-// WEATHER SECTION
+// WEATHER SECTION (GitHub Pages friendly)
 // ================================
 async function fetchWeather() {
   const apiKey = "d253a27be815c025821678be33b76786"; // Your OpenWeatherMap API key
   const city = "Cape Town,ZA";
-  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
+
+  // Use a free CORS proxy to bypass CORS issues on GitHub Pages
+  const proxy = "https://api.allorigins.win/raw?url=";
+  const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
+  const url = proxy + encodeURIComponent(apiUrl);
 
   try {
     const response = await fetch(url);
@@ -43,10 +47,8 @@ async function fetchSpotlights() {
     if (!response.ok) throw new Error(`Members not found (status ${response.status})`);
 
     const data = await response.json();
-    // Filter only Silver (2) and Gold (3) members
     const members = data.members.filter(m => m.membershiplevel === 2 || m.membershiplevel === 3);
 
-    // Pick 3 random members
     const shuffled = members.sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 3);
 
@@ -74,3 +76,4 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchWeather();
   fetchSpotlights();
 });
+

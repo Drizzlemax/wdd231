@@ -1,12 +1,14 @@
+// ================================
 // WEATHER SECTION
+// ================================
 async function fetchWeather() {
-  const apiKey = "d253a27be815c025821678be33b76786";
+  const apiKey = "d253a27be815c025821678be33b76786"; // Your OpenWeatherMap API key
   const city = "Cape Town,ZA";
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
-  
+
   try {
     const response = await fetch(url);
-    if (!response.ok) throw new Error("Weather data not found");
+    if (!response.ok) throw new Error(`Weather data not found (status ${response.status})`);
 
     const data = await response.json();
     const weatherInfo = document.getElementById("weather-info");
@@ -15,29 +17,36 @@ async function fetchWeather() {
     const forecast = data.list.filter((item, index) => index % 8 === 0).slice(1, 4); // next 3 days
 
     weatherInfo.innerHTML = `
-      <p>🌡️ Current Temp: ${Math.round(current.main.temp)}°C</p>
-      <p>☁️ Condition: ${current.weather[0].description}</p>
-      <h3>3-Day Forecast</h3>
-      <ul>
-        ${forecast.map(item => `
-          <li>${new Date(item.dt_txt).toLocaleDateString()}: ${Math.round(item.main.temp)}°C</li>
-        `).join("")}
-      </ul>
+      <div class="weather-card">
+        <p>🌡️ Current Temp: ${Math.round(current.main.temp)}°C</p>
+        <p>☁️ Condition: ${current.weather[0].description}</p>
+        <h3>3-Day Forecast</h3>
+        <ul>
+          ${forecast.map(item => `
+            <li>${new Date(item.dt_txt).toLocaleDateString()}: ${Math.round(item.main.temp)}°C</li>
+          `).join("")}
+        </ul>
+      </div>
     `;
   } catch (error) {
-    document.getElementById("weather-info").innerHTML = `<p>Error: ${error.message}</p>`;
+    console.error(error);
+    document.getElementById("weather-info").innerHTML = `<p>Error loading weather: ${error.message}</p>`;
   }
 }
 
+// ================================
 // SPOTLIGHT SECTION
+// ================================
 async function fetchSpotlights() {
   try {
     const response = await fetch("data/members.json");
-    if (!response.ok) throw new Error("Members not found");
+    if (!response.ok) throw new Error(`Members not found (status ${response.status})`);
 
     const data = await response.json();
+    // Filter only Silver (2) and Gold (3) members
     const members = data.members.filter(m => m.membershiplevel === 2 || m.membershiplevel === 3);
 
+    // Pick 3 random members
     const shuffled = members.sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 3);
 
@@ -53,10 +62,15 @@ async function fetchSpotlights() {
       </div>
     `).join("");
   } catch (error) {
-    document.getElementById("spotlight-container").innerHTML = `<p>Error: ${error.message}</p>`;
+    console.error(error);
+    document.getElementById("spotlight-container").innerHTML = `<p>Error loading members: ${error.message}</p>`;
   }
 }
 
-// INIT
-fetchWeather();
-fetchSpotlights();
+// ================================
+// INITIALIZATION
+// ================================
+document.addEventListener("DOMContentLoaded", () => {
+  fetchWeather();
+  fetchSpotlights();
+});

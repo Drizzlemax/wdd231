@@ -6,16 +6,17 @@
     "configurations": [
         {
             "name": "Launch Chrome",
-            "request": "launch",
-            "type": "chrome",
-            "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}"
+            "type": "chrome",           // Use Chrome for debugging
+            "request": "launch",        // Launch a new browser instance
+            "url": "http://localhost:8080", // Your local dev server URL
+            "webRoot": "${workspaceFolder}" // Maps source files to the browser
         },
         {
-            "type": "msedge",
+            "name": "Open directory.html in Edge",
+            "type": "msedge",           // Use Microsoft Edge
             "request": "launch",
-            "name": "Open directory.html",
-            "file": "g:\\My Drive\\SE PROJECTS\\wdd231\\chamber\\directory.html"
+            "file": "G:/My Drive/SE PROJECTS/wdd231/chamber/directory.html" 
+            // Path to your HTML file
         }
     ]
 }

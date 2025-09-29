@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Chamber | Cape Town Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/directory.css">
+  <link rel="icon" type="image/png" href="images/Cape town Chamber of commerce_fav.png">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <img src="images/BackgroundCC8.png" alt="Chamber Logo" class="logo" width="160px">
+    <h1>Cape Town Chamber of Commerce</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="join-page">
+    <!-- MEMBERSHIP FORM -->
+    <section class="form-section">
+      <h2>Join the Chamber</h2>
+      <form method="get" action="thankyou.html">
+        <label>
+          First Name:
+          <input type="text" name="firstname" title="First Name" autocomplete="given-name" required>
+        </label>
+        <label>
+          Last Name:
+          <input type="text" name="lastname" title="Last Name" autocomplete="family-name" required>
+        </label>
+        <label>
+          Organizational Title:
+          <input type="text" name="orgtitle" title="Organization Title" autocomplete="organization-title"
+                 pattern="[A-Za-z\\-\\s]{7,}">
+        </label>
+        <label>
+          Email Address:
+          <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@email.com" required>
+        </label>
+        <label>
+          Mobile Phone:
+          <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
+        </label>
+        <label>
+          Business/Organization Name:
+          <input type="text" name="organization" title="Organization" autocomplete="organization" required>
+        </label>
+        <label>
+          Membership Level:
+          <select name="membershiplevel" title="Membership Level">
+            <option value="NP">NP Membership (Non-Profit – Free)</option>
+            <option value="Bronze">Bronze Membership</option>
+            <option value="Silver">Silver Membership</option>
+            <option value="Gold">Gold Membership</option>
+          </select>
+        </label>
+        <label>
+          Organization Description:
+          <textarea name="description" title="Business Description"></textarea>
+        </label>
+        <input type="hidden" name="timestamp" id="timestamp">
+        <input type="submit" value="Submit Application">
+      </form>
+    </section>
+
+    <!-- MEMBERSHIP CARDS -->
+    <section class="membership-cards">
+      <div class="card">
+        <h3>NP Membership</h3>
+        <p>Non-profit organizations join for free.</p>
+        <a onclick="openModal('npModal')">More Info</a>
+      </div>
+      <div class="card">
+        <h3>Bronze Membership</h3>
+        <p>Affordable entry-level membership.</p>
+        <a onclick="openModal('bronzeModal')">More Info</a>
+      </div>
+      <div class="card">
+        <h3>Silver Membership</h3>
+        <p>More exposure & exclusive events.</p>
+        <a onclick="openModal('silverModal')">More Info</a>
+      </div>
+      <div class="card">
+        <h3>Gold Membership</h3>
+        <p>Premium benefits & spotlight ads.</p>
+        <a onclick="openModal('goldModal')">More Info</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODALS -->
+  <div id="npModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('npModal')">&times;</span>
+      <h2>NP Membership</h2>
+      <p>Free membership for non-profit organizations with access to networking events.</p>
+    </div>
+  </div>
+
+  <div id="bronzeModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
+      <h2>Bronze Membership</h2>
+      <p>Includes event invitations, newsletters, and discounted training.</p>
+    </div>
+  </div>
+
+  <div id="silverModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('silverModal')">&times;</span>
+      <h2>Silver Membership</h2>
+      <p>All Bronze benefits + spotlight positions on website and directory boosts.</p>
+    </div>
+  </div>
+
+  <div id="goldModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('goldModal')">&times;</span>
+      <h2>Gold Membership</h2>
+      <p>All Silver benefits + premium advertising, VIP networking, and event sponsorship discounts.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Cape Town Chamber of Commerce | All Rights Reserved</p>
+    <div class="social-icons">
+    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+      <!
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+      <!-- Twitter/X SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.5 11.24H16.27l-5.282-6.938-6.04 6.938H1.64l7.73-8.885L1.14 2.25h6.308l4.77 6.268 6.026-6.268z"/>
+      </svg>
+    </a>
+
+    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+      <!-- LinkedIn SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.763 0 5-2.24 5-5v-14c0-2.76-2.237-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.792-1.75-1.764 0-.973.784-1.764 1.75-1.764s1.75.791 1.75 1.764c0 .972-.784 1.764-1.75 1.764zm13.5 11.268h-3v-5.356c0-1.276-.025-2.918-1.778-2.918-1.78 0-2.05 1.387-2.05 2.82v5.454h-3v-10h2.88v1.367h.041c.401-.757 1.381-1.555 2.843-1.555 3.042 0 3.604 2.005 3.604 4.617v5.571z"/>
+      </svg>
+    </a>
+
+    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+      <!-- Instagram SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.206.056 2.003.246 2.466.415.596.218 1.022.479 1.47.927.448.448.709.874.927 1.47.169.463.359 1.26.415 2.466.058 1.266.07 1.646.07 4.849s-.012 3.584-.07 4.849c-.056 1.206-.246 2.003-.415 2.466-.218.596-.479 1.022-.927 1.47-.448.448-.874.709-1.47.927-.463.169-1.26.359-2.466.415-1.266.058-1.646.07-4.85.07s-3.584-.012-4.849-.07c-1.206-.056-2.003-.246-2.466-.415-.596-.218-1.022-.479-1.47-.927-.448-.448-.709-.874-.927-1.47-.169-.463-.359-1.26-.415-2.466C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.849c.056-1.206.246-2.003.415-2.466.218-.596.479-1.022.927-1.47.448-.448.874-.709 1.47-.927.463-.169 1.26-.359 2.466-.415C8.416 2.175 8.796 2.163 12 2.163zm0 1.838c-3.17 0-3.548.012-4.796.07-.999.046-1.54.213-1.896.356-.478.185-.82.407-1.179.766-.359.359-.581.701-.766 1.179-.143.356-.31.897-.356 1.896-.058 1.248-.07 1.626-.07 4.796s.012 3.548.07 4.796c.046.999.213 1.54.356 1.896.185.478.407.82.766 1.179.359.359.701.581 1.179.766.356.143.897.31 1.896.356 1.248.058 1.626.07 4.796.07s3.548-.012 4.796-.07c.999-.046 1.54-.213 1.896-.356.478-.185.82-.407 1.179-.766.359-.359.581-.701.766-1.179.143-.356.31-.897.356-1.896.058-1.248.07-1.626.07-4.796s-.012-3.548-.07-4.796c-.046-.999-.213-1.54-.356-1.896-.185-.478-.407-.82-.766-1.179-.359-.359-.701-.581-1.179-.766-.356-.143-.897-.31-1.896-.356-1.248-.058-1.626-.07-4.796-.07zm0 3.838a5.999 5.999 0 110 12.001 5.999 5.999 0 010-12.001zm0 9.9a3.9 3.9 0 100-7.801 3.9 3.9 0 000 7.801zm6.406-10.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>
+      </svg>
+    </a>
+  </div>
+  </footer>
+
+  <script>
+    // Timestamp injection
+    document.getElementById("timestamp").value = new Date().toLocaleString();
+
+    // Modal functions
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target.classList.contains("modal")) {
+        event.target.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

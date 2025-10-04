@@ -1,0 +1,119 @@
+/* Color Palette */
+:root {
+  --black: #000000;
+  --gold: #D6A463;
+  --deepblue: #253A47;
+  --white: #ffffff;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: var(--white);
+  color: var(--deepblue);
+}
+
+header {
+  background: var(--black);
+  color: var(--gold);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+}
+
+header .tagline {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  color: var(--black);
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 0.25rem;
+  font-family: "Playfair Display", serif;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+.wireframe {
+  max-width: 100%;
+  margin: 1rem 0;
+  border: 1px solid var(--deepblue);
+  border-radius: 6px;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background: #ffffff;
+  color: #253A47;
+}
+
+header {
+  background: #253A47;
+  color: #D6A463;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: "Georgia", serif;
+}
+
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-logo h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #D6A463;
+}
+
+.footer-logo p {
+  margin: 0.2rem 0 1rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.social-icons {
+  margin: 1rem 0;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #D6A463;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-top: 1rem;
+}

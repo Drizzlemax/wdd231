@@ -65,3 +65,24 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load the data when the page is ready
   loadAttractions();
 });
+
+
+// Display the "Last Modified" date in the footer
+document.addEventListener("DOMContentLoaded", () => {
+  const lastModifiedElement = document.getElementById("lastModified");
+
+  if (lastModifiedElement) {
+    const modifiedDate = new Date(document.lastModified);
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    };
+    lastModifiedElement.textContent = `Last Updated: ${modifiedDate.toLocaleDateString(
+      "en-GB",
+      options
+    )}`;
+  }
+});

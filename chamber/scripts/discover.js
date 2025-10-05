@@ -1,28 +1,37 @@
-document.addEventListener("DOMContentLoaded", () => {
-  loadAttractions();
-});
+// discover.js
 
-async function loadAttractions() {
-  const container = document.getElementById("attractions-container");
+document.addEventListener("DOMContentLoaded", async () => {
+  const container = document.querySelector("#attractionsContainer");
 
   try {
     const response = await fetch("data/attractions.json");
-    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
 
-    container.innerHTML = data.attractions.map((item) => `
-      <div class="attraction-card" style="grid-area: ${item.id};">
+    const data = await response.json();
+    const attractions = data.attractions;
+
+    attractions.forEach(attraction => {
+      const card = document.createElement("section");
+      card.classList.add("card");
+
+      card.innerHTML = `
+        <h2>${attraction.name}</h2>
         <figure>
-          <img src="${item.image}" alt="${item.name}">
+          <img src="${attraction.image}" alt="${attraction.name}">
         </figure>
-        <h2>${item.name}</h2>
-        <address>${item.address}</address>
-        <p>${item.description}</p>
+        <address>${attraction.address}</address>
+        <p>${attraction.description}</p>
         <button>Learn More</button>
-      </div>
-    `).join("");
+      `;
+
+      container.appendChild(card);
+    });
   } catch (error) {
     console.error("Error fetching attractions:", error);
-    container.innerHTML = `<p class="error">⚠️ Failed to load attractions. Check console for details.</p>`;
+    const errorMsg = document.createElement("p");
+    errorMsg.textContent = "⚠️ Failed to load attractions. Please try again later.";
+    container.appendChild(errorMsg);
   }
-}
+});

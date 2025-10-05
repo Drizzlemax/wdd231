@@ -5,56 +5,56 @@
       "name": "Table Mountain",
       "address": "Table Mountain, Cape Town",
       "description": "A flat-topped mountain forming a prominent landmark overlooking the city.",
-      "image": "images/table-mountain.webp"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Table_Mountain_from_Bloubergstrand.jpg"
     },
     {
       "id": "card2",
       "name": "V&A Waterfront",
       "address": "V&A Waterfront, Cape Town",
       "description": "A vibrant shopping, dining and entertainment destination by the harbor.",
-      "image": "images/va-waterfront.webp"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/V%26A_Waterfront%2C_Cape_Town.jpg"
     },
     {
       "id": "card3",
       "name": "Robben Island",
       "address": "Robben Island, Cape Town",
       "description": "Famous historical site where Nelson Mandela was imprisoned.",
-      "image": "images/robben-island.webp"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Robben_Island_Prison.jpg"
     },
     {
       "id": "card4",
       "name": "Kirstenbosch Gardens",
       "address": "Kirstenbosch, Cape Town",
       "description": "Botanical gardens showcasing South Africa's indigenous flora.",
-      "image": "images/kirstenbosch.webp"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Kirstenbosch_Botanical_Gardens_2017.jpg"
     },
     {
       "id": "card5",
       "name": "Cape Point",
       "address": "Cape Point, Cape Town",
       "description": "A scenic promontory within the Cape of Good Hope Nature Reserve.",
-      "image": "images/cape-point.webp"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Cape_Point.jpg"
     },
     {
       "id": "card6",
       "name": "Boulders Beach",
       "address": "Simon's Town, Cape Town",
       "description": "Home to a colony of African penguins with sandy beaches.",
-      "image": "images/boulders-beach.webp"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Boulders_Beach_Penguins_2015.jpg"
     },
     {
       "id": "card7",
       "name": "District Six Museum",
       "address": "District Six, Cape Town",
       "description": "Museum highlighting the history and legacy of apartheid in Cape Town.",
-      "image": "images/district-six.webp"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/District_Six_Museum_Cape_Town.jpg"
     },
     {
       "id": "card8",
       "name": "Bo-Kaap",
       "address": "Bo-Kaap, Cape Town",
       "description": "Colorful historic neighborhood with Cape Malay heritage and culture.",
-      "image": "images/bo-kaap.webp"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Bo-Kaap_Cape_Town.jpg"
     }
   ]
 }

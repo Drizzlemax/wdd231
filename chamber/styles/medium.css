@@ -1,0 +1,77 @@
+/* Discover Page Grid */
+.discover-grid {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+/* Card Styles */
+.attraction-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fafafa;
+  text-align: center;
+}
+.attraction-card figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+.attraction-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.attraction-card address {
+  font-style: normal;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
+.attraction-card p {
+  margin-bottom: 0.8rem;
+}
+.attraction-card button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.attraction-card button:hover {
+  background-color: var(--secondary);
+}
+
+/* MEDIUM SCREENS */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .grid-container {
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+/* LARGE SCREENS */
+@media (min-width: 1025px) {
+  .grid-container {
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "attractions": [
+    {
+      "id": "card1",
+      "name": "Table Mountain",
+      "address": "Table Mountain, Cape Town",
+      "description": "A flat-topped mountain forming a prominent landmark overlooking the city.",
+      "image": "images/table-mountain.webp"
+    },
+    {
+      "id": "card2",
+      "name": "V&A Waterfront",
+      "address": "V&A Waterfront, Cape Town",
+      "description": "A vibrant shopping, dining and entertainment destination by the harbor.",
+      "image": "images/va-waterfront.webp"
+    },
+    {
+      "id": "card3",
+      "name": "Robben Island",
+      "address": "Robben Island, Cape Town",
+      "description": "Famous historical site where Nelson Mandela was imprisoned.",
+      "image": "images/robben-island.webp"
+    },
+    {
+      "id": "card4",
+      "name": "Kirstenbosch Gardens",
+      "address": "Kirstenbosch, Cape Town",
+      "description": "Botanical gardens showcasing South Africa's indigenous flora.",
+      "image": "images/kirstenbosch.webp"
+    },
+    {
+      "id": "card5",
+      "name": "Cape Point",
+      "address": "Cape Point, Cape Town",
+      "description": "A scenic promontory within the Cape of Good Hope Nature Reserve.",
+      "image": "images/cape-point.webp"
+    },
+    {
+      "id": "card6",
+      "name": "Boulders Beach",
+      "address": "Simon's Town, Cape Town",
+      "description": "Home to a colony of African penguins with sandy beaches.",
+      "image": "images/boulders-beach.webp"
+    },
+    {
+      "id": "card7",
+      "name": "District Six Museum",
+      "address": "District Six, Cape Town",
+      "description": "Museum highlighting the history and legacy of apartheid in Cape Town.",
+      "image": "images/district-six.webp"
+    },
+    {
+      "id": "card8",
+      "name": "Bo-Kaap",
+      "address": "Bo-Kaap, Cape Town",
+      "description": "Colorful historic neighborhood with Cape Malay heritage and culture.",
+      "image": "images/bo-kaap.webp"
+    }
+  ]
+}

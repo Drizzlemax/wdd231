@@ -67,6 +67,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// Visitor Message using localStorage
+document.addEventListener("DOMContentLoaded", () => {
+  const messageContainer = document.getElementById("visitor-message");
+  const lastVisit = localStorage.getItem("lastVisit");
+  const currentTime = Date.now();
+
+  if (!lastVisit) {
+    // First-time visitor
+    messageContainer.textContent = "Welcome! Let us know if you have any questions.";
+  } else {
+    const timeDifference = currentTime - parseInt(lastVisit);
+    const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+    if (daysDifference < 1) {
+      messageContainer.textContent = "Back so soon! Awesome!";
+    } else if (daysDifference === 1) {
+      messageContainer.textContent = "You last visited 1 day ago.";
+    } else {
+      messageContainer.textContent = `You last visited ${daysDifference} days ago.`;
+    }
+  }
+
+  // Store the current visit time
+  localStorage.setItem("lastVisit", currentTime);
+});
+
+
 // Display the "Last Modified" date in the footer
 document.addEventListener("DOMContentLoaded", () => {
   const lastModifiedElement = document.getElementById("lastModified");

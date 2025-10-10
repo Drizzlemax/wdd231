@@ -1,55 +1,110 @@
-// Responsive Navigation
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
+// ============================
+// index.js
+// Handles navigation, interactivity, and data rendering
+// ============================
 
-// js/index.js
-import { loadData } from './data-fetch.js';
+document.addEventListener("DOMContentLoaded", () => {
+  // ============================
+  // NAVBAR TOGGLE
+  // ============================
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
 
-// Initialize page after DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  loadData();
-});
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
 
+  // ============================
+  // FETCH JSON DATA
+  // ============================
+  const servicesContainer = document.getElementById("services-container");
+  const teamContainer = document.getElementById("team-container");
+  const calendarContainer = document.getElementById("calendar-container");
 
-// Fetch API Data Example
-const serviceGrid = document.getElementById('service-grid');
-async function loadServices() {
-  try {
-    const response = await fetch('data/services.json');
-    if (!response.ok) throw new Error('Network error');
-    const services = await response.json();
+  fetch("data/data.json") // ✅ correct relative path from index.html
+    .then(response => {
+      if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
+      return response.json();
+    })
+    .then(data => {
+      if (servicesContainer) renderServices(data.services);
+      if (teamContainer) renderTeam(data.team);
+      if (calendarContainer) renderBookings(data.bookings);
+    })
+    .catch(error => console.error("❌ Error loading data.json:", error));
 
-    services.slice(0, 15).forEach(service => {
-      const card = document.createElement('div');
-      card.className = 'service-card';
+  // ============================
+  // RENDER FUNCTIONS
+  // ============================
+
+  function renderServices(services) {
+    servicesContainer.innerHTML = "";
+    services.forEach(service => {
+      const card = document.createElement("div");
+      card.className = "card service-card";
       card.innerHTML = `
+        <img src="${service.image}" alt="${service.title}">
         <h3>${service.title}</h3>
         <p>${service.description}</p>
-        <p><strong>Price:</strong> ${service.price}</p>
-        <p><strong>Duration:</strong> ${service.duration}</p>
+        <p class="price">From R${service.price}</p>
+        <p class="duration">${service.duration}</p>
       `;
-      serviceGrid.appendChild(card);
+      servicesContainer.appendChild(card);
     });
-  } catch (error) {
-    console.error('Error fetching services:', error);
   }
-}
-loadServices();
 
-// Modal Handling
-const form = document.getElementById('booking-form');
-const modal = document.getElementById('confirmation-modal');
-const closeModal = document.getElementById('close-modal');
+  function renderTeam(team) {
+    teamContainer.innerHTML = "";
+    team.forEach(member => {
+      const card = document.createElement("div");
+      card.className = "card team-card";
+      card.innerHTML = `
+        <img src="${member.image}" alt="${member.name}">
+        <h3>${member.name}</h3>
+        <p class="role">${member.role}</p>
+        <p>${member.bio}</p>
+      `;
+      teamContainer.appendChild(card);
+    });
+  }
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  modal.classList.remove('hidden');
-  localStorage.setItem('lastBooking', new Date().toISOString());
-});
+  function renderBookings(bookings) {
+    calendarContainer.innerHTML = "";
+    bookings.forEach(booking => {
+      const item = document.createElement("div");
+      item.className = "booking-item";
+      item.innerHTML = `
+        <strong>${booking.service}</strong><br>
+        ${booking.date} @ ${booking.time}<br>
+        <em>${booking.customer}</em>
+      `;
+      calendarContainer.appendChild(item);
+    });
+  }
 
-closeModal.addEventListener('click', () => {
-  modal.classList.add('hidden');
+  // ============================
+  // BOOKING FORM
+  // ============================
+  const bookingForm = document.getElementById("booking-form");
+
+  if (bookingForm) {
+    bookingForm.addEventListener("submit", e => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const service = document.getElementById("service").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+
+      if (!name || !service || !date || !time) {
+        alert("Please fill out all booking details.");
+        return;
+      }
+
+      alert(`✅ Booking Confirmed!\n\nName: ${name}\nService: ${service}\nDate: ${date}\nTime: ${time}`);
+      bookingForm.reset();
+    });
+  }
 });

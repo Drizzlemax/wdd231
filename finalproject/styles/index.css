@@ -194,3 +194,50 @@ footer {
     display: block;
   }
 }
+
+
+.hero-small {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.hero-small h1 {
+  font-size: 2.5rem;
+  color: var(--gold);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.cta-section {
+  background-color: var(--gold);
+  color: var(--black);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-btn {
+  background-color: var(--black);
+  color: var(--gold);
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+/* Additional styles for services page */

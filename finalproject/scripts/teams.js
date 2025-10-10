@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Fetch team data from JSON file
 function fetchTeamData() {
-  fetch('services.json')
+  fetch('data/services.json')  // Fixed path - now pointing to data directory
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -40,12 +40,14 @@ function fetchTeamData() {
       return response.json();
     })
     .then(data => {
+      console.log('Team data loaded successfully:', data.team); // Debug log
       // Populate the team container with all team members initially
       populateTeamMembers(data.team);
     })
     .catch(error => {
       console.error('Error fetching team data:', error);
       // Fallback to hardcoded data if fetch fails
+      console.log('Using fallback team data');
       loadFallbackTeamData();
     });
 }
@@ -203,6 +205,12 @@ function loadFallbackTeamData() {
 // Populate team members in the container
 function populateTeamMembers(teamMembers) {
   const teamContainer = document.getElementById('team-container');
+  
+  if (!teamContainer) {
+    console.error('Team container not found!');
+    return;
+  }
+  
   teamContainer.innerHTML = ''; // Clear existing content
 
   teamMembers.forEach(member => {

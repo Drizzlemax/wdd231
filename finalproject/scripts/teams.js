@@ -1,7 +1,7 @@
 // Team page functionality
 document.addEventListener('DOMContentLoaded', function() {
-  // Load team data from JSON and populate the page
-  loadTeamData();
+  // Load team data from JSON file
+  fetchTeamData();
   
   // Tab filtering functionality
   const tabButtons = document.querySelectorAll('.tab-btn');
@@ -30,11 +30,29 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Load team data from JSON
-function loadTeamData() {
-  // In a real implementation, this would fetch from a JSON file
-  // For now, we'll use the data structure we defined
-  const teamData = {
+// Fetch team data from JSON file
+function fetchTeamData() {
+  fetch('services.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Populate the team container with all team members initially
+      populateTeamMembers(data.team);
+    })
+    .catch(error => {
+      console.error('Error fetching team data:', error);
+      // Fallback to hardcoded data if fetch fails
+      loadFallbackTeamData();
+    });
+}
+
+// Fallback team data if JSON fetch fails
+function loadFallbackTeamData() {
+  const fallbackTeamData = {
     "team": [
       {
         "id": 1,
@@ -179,8 +197,7 @@ function loadTeamData() {
     ]
   };
 
-  // Populate the team container with all team members initially
-  populateTeamMembers(teamData.team);
+  populateTeamMembers(fallbackTeamData.team);
 }
 
 // Populate team members in the container
@@ -201,13 +218,13 @@ function createTeamMemberElement(member) {
   memberDiv.setAttribute('data-category', member.category);
   
   // Format details for display
-  const certifications = member.details.certifications || 'Not specified';
-  const languages = member.details.languages || 'Not specified';
-  const specialties = member.details.specialties || 'Not specified';
+  const certifications = member.details?.certifications || 'Not specified';
+  const languages = member.details?.languages || 'Not specified';
+  const specialties = member.details?.specialties || 'Not specified';
   
   memberDiv.innerHTML = `
     <div class="member-image">
-      <img src="${member.image}" alt="${member.name} - ${member.role}">
+      <img src="${member.image}" alt="${member.name} - ${member.role}" onerror="this.src='images/placeholder-team.jpg'">
       <div class="member-overlay">
         <div class="social-links">
           <a href="#"><img src="images/linkedin.svg" alt="LinkedIn"></a>

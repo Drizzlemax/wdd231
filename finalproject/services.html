@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ===== META ===== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Luxury shuttle services, private tours, and airport transfers in Cape Town. LinkCar Shuttles offers premium travel experiences.">
+  <meta name="description" content="Premium shuttle services in Cape Town - Airport transfers, private tours, corporate shuttles, and more.">
   <meta name="author" content="LinkCar Shuttles">
-  <meta property="og:title" content="LinkCar Shuttles | Luxury Transport in Cape Town">
-  <meta property="og:description" content="Luxury Shuttle Services • Private Tours • Airport Transfers.">
+  <meta property="og:title" content="Our Services | LinkCar Shuttles">
+  <meta property="og:description" content="Discover our premium transport services in Cape Town.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/logo.png">
-  <link rel="icon" href="images/favicon.png" type="image/png">
-  <title>LinkCar Shuttles | Luxury Transport in Cape Town</title>
 
-  <!-- Correct CSS Path -->
+  <!-- ===== TITLE & FAVICON ===== -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <title>Our Services | LinkCar Shuttles</title>
+
+  <!-- ===== STYLES ===== -->
   <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/services.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -22,87 +26,147 @@
   <header>
     <nav class="navbar">
       <div class="logo">
-        <img src="images/logo.png" alt="LinkCar Shuttles Logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="LinkCar Shuttles Logo">
+        </a>
       </div>
       <button class="hamburger" id="hamburger">☰</button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#hero">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="#team">Meet the Team</a></li>
-        <li><a href="#bookings">Bookings</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="team.html">Meet the Team</a></li>
+        <li><a href="index.html#bookings">Bookings</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ================= HERO ================= -->
-  <section id="hero" class="hero-section">
+  <!-- ================= SERVICES HERO ================= -->
+  <section class="services-hero">
     <div class="hero-content">
-      <img src="images/logo.png" alt="LinkCar Logo" class="hero-logo">
-      <h1>Luxury Shuttle Services in Cape Town</h1>
-      <p>Chauffeured Rides • Private Tours • Airport Transfers</p>
-      <a href="#bookings" class="cta-btn">Book Now</a>
+      <h1>Our Premium Services</h1>
+      <p>Experience luxury transport tailored to your needs in beautiful Cape Town</p>
+      <a href="index.html#bookings" class="cta-btn">Book Your Ride</a>
     </div>
   </section>
 
-  <!-- ================= SERVICES ================= -->
-  <section id="services" class="content-section">
-    <h2>Our Services</h2>
-    <div id="services-container" class="grid-container"></div>
+  <!-- ================= SERVICES INTRODUCTION ================= -->
+  <section class="services-intro">
+    <div class="container">
+      <h2>Why Choose LinkCar Shuttles?</h2>
+      <p>At LinkCar Shuttles, we pride ourselves on delivering exceptional transportation experiences. Our fleet of luxury vehicles and professional chauffeurs ensure that every journey is comfortable, safe, and memorable.</p>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon">🚗</div>
+          <h3>Luxury Vehicles</h3>
+          <p>Travel in style with our premium fleet</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⏱️</div>
+          <h3>Punctual Service</h3>
+          <p>We value your time with prompt pickups</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🛡️</div>
+          <h3>Safety First</h3>
+          <p>Your security is our top priority</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🌟</div>
+          <h3>5-Star Service</h3>
+          <p>Exceptional customer experience guaranteed</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- ================= TEAM ================= -->
-  <section id="team" class="content-section">
-    <h2>Meet the Team</h2>
-    <div id="team-container" class="grid-container"></div>
+  <!-- ================= SERVICES FILTER ================= -->
+  <section class="services-filter">
+    <div class="container">
+      <h2>Find Your Perfect Service</h2>
+      <div class="filter-options">
+        <button class="filter-btn active" data-filter="all">All Services</button>
+        <button class="filter-btn" data-filter="transfers">Transfers</button>
+        <button class="filter-btn" data-filter="tours">Tours</button>
+        <button class="filter-btn" data-filter="corporate">Corporate</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+      </div>
+    </div>
   </section>
 
-  <!-- ================= BOOKINGS ================= -->
-  <section id="bookings" class="content-section">
-    <h2>Bookings Calendar</h2>
-    <div id="calendar-container" class="calendar"></div>
-
-    <!-- Booking Form -->
-    <form id="booking-form" class="booking-form">
-      <h3>Make a Booking</h3>
-      <label for="name">Full Name</label>
-      <input type="text" id="name" required>
-
-      <label for="service">Service Type</label>
-      <select id="service" required>
-        <option value="">Select a service</option>
-        <option value="Airport Transfer">Airport Transfer</option>
-        <option value="Private Tour">Private Tour</option>
-        <option value="Corporate Travel">Corporate Travel</option>
-      </select>
-
-      <label for="date">Date</label>
-      <input type="date" id="date" required>
-
-      <label for="time">Time</label>
-      <input type="time" id="time" required>
-
-      <button type="submit" class="cta-btn">Confirm Booking</button>
-    </form>
+  <!-- ================= SERVICES GRID ================= -->
+  <section class="services-grid-section">
+    <div class="container">
+      <div id="services-container" class="services-grid">
+        <!-- Services will be populated by JavaScript -->
+      </div>
+    </div>
   </section>
 
-  <!-- ================= CONTACT ================= -->
-  <section id="contact" class="content-section">
-    <h2>Contact Us</h2>
-    <p>Email: bookings@linkcarshuttles.co.za</p>
-    <p>Phone: +27 65 910 1300</p>
-    <p>Location: Cape Town, South Africa</p>
+  <!-- ================= SERVICE DETAILS MODAL ================= -->
+  <div id="service-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="modal-content">
+        <!-- Modal content will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= BOOKING CTA ================= -->
+  <section class="booking-cta">
+    <div class="container">
+      <h2>Ready to Experience Premium Transport?</h2>
+      <p>Book your luxury ride today and discover the LinkCar difference</p>
+      <div class="cta-buttons">
+        <a href="index.html#bookings" class="cta-btn">Book Now</a>
+        <a href="index.html#contact" class="cta-btn secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ SECTION ================= -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>How far in advance should I book?</h3>
+          <p>We recommend booking at least 24 hours in advance for airport transfers and 48 hours for private tours to ensure availability.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What is your cancellation policy?</h3>
+          <p>Cancellations made 24 hours before the scheduled service receive a full refund. Cancellations within 24 hours incur a 50% charge.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you provide child seats?</h3>
+          <p>Yes, we offer child seats at no additional cost. Please specify your requirements when booking.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Are your drivers certified?</h3>
+          <p>All our chauffeurs are professionally licensed, certified, and undergo regular training to maintain our high standards.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What areas do you serve?</h3>
+          <p>We serve all of Cape Town and surrounding areas, including the Winelands, Cape Peninsula, and airport transfers.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I request a specific vehicle?</h3>
+          <p>Yes, you can request a specific vehicle type when booking, subject to availability.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ================= FOOTER ================= -->
   <footer>
     <p>&copy; 2025 LinkCar Shuttles. All Rights Reserved.</p>
     <div class="footer-links">
-      <a href="#hero">Home</a> |
+      <a href="index.html">Home</a> |
       <a href="services.html">Services</a> |
-      <a href="#team">Team</a> |
-      <a href="#bookings">Bookings</a> |
-      <a href="#contact">Contact</a>
+      <a href="team.html">Team</a> |
+      <a href="index.html#bookings">Bookings</a> |
+      <a href="index.html#contact">Contact</a>
     </div>
     <div class="social-icons">
       <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
@@ -113,7 +177,6 @@
   </footer>
 
   <!-- ================= SCRIPTS ================= -->
-  <script type="module" src="scripts/data-fetch.js"></script>
-  <script type="module" src="scripts/index.js"></script>
+  <script src="scripts/services.js"></script>
 </body>
 </html>

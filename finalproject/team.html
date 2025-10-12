@@ -26,7 +26,7 @@
   <header>
     <nav class="navbar">
       <div class="logo">
-        <a href="index.html" class="logo-container">
+        <a href="index.html">
           <img src="images/logo.png" alt="LinkCar Shuttles Logo">
         </a>
       </div>
@@ -59,77 +59,63 @@
 
   <!-- ================= TEAM CATEGORIES ================= -->
   <section class="team-categories">
-    <div class="category-tabs">
-      <button class="tab-btn active" data-category="all">All Team Members</button>
-      <button class="tab-btn" data-category="drivers">Drivers</button>
-      <button class="tab-btn" data-category="management">Management</button>
-      <button class="tab-btn" data-category="support">Support Staff</button>
+    <div class="container">
+      <h2>Find Your Team Member</h2>
+      <div class="category-tabs">
+        <button class="tab-btn active" data-category="all">All Team Members</button>
+        <button class="tab-btn" data-category="drivers">Drivers</button>
+        <button class="tab-btn" data-category="management">Management</button>
+        <button class="tab-btn" data-category="support">Support Staff</button>
+      </div>
     </div>
   </section>
 
   <!-- ================= TEAM MEMBERS ================= -->
   <section class="team-members">
-    <div id="team-container" class="team-container">
-      <!-- Team members will be loaded by JavaScript -->
-      <div class="loading-message">Loading team members...</div>
+    <div class="container">
+      <div id="team-container" class="team-grid">
+        <!-- Team members will be populated by JavaScript -->
+        <div class="loading-message">Loading team members...</div>
+      </div>
     </div>
   </section>
 
   <!-- ================= VALUES ================= -->
   <section class="company-values">
-    <h2>Our Values</h2>
-    <div class="values-container">
-      <div class="value-card">
-        <div class="value-icon">🛡️</div>
-        <h3>Safety First</h3>
-        <p>All our drivers undergo rigorous safety training and our vehicles are regularly maintained to the highest standards.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">⭐</div>
-        <h3>Excellence</h3>
-        <p>We strive for perfection in every aspect of our service, from vehicle cleanliness to customer interactions.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">🤝</div>
-        <h3>Professionalism</h3>
-        <p>Our team maintains the highest level of professionalism, ensuring a seamless and respectful experience.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">💎</div>
-        <h3>Luxury</h3>
-        <p>We believe every journey should be a premium experience, with attention to comfort and personal service.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= CERTIFICATIONS ================= -->
-  <section class="certifications">
-    <h2>Our Certifications</h2>
-    <div class="certs-container">
-      <div class="cert-item">
-        <img src="images/cert1.png" alt="Tourism Grading Council" onerror="this.style.display='none'">
-        <p>Tourism Grading Council</p>
-      </div>
-      <div class="cert-item">
-        <img src="images/cert2.png" alt="PRDP Certified" onerror="this.style.display='none'">
-        <p>PRDP Certified</p>
-      </div>
-      <div class="cert-item">
-        <img src="images/cert3.png" alt="Defensive Driving Certified" onerror="this.style.display='none'">
-        <p>Defensive Driving Certified</p>
-      </div>
-      <div class="cert-item">
-        <img src="images/cert4.png" alt="First Aid Trained" onerror="this.style.display='none'">
-        <p>First Aid Trained</p>
+    <div class="container">
+      <h2>Our Values</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">🛡️</div>
+          <h3>Safety First</h3>
+          <p>All our drivers undergo rigorous safety training and our vehicles are regularly maintained to the highest standards.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">⭐</div>
+          <h3>Excellence</h3>
+          <p>We strive for perfection in every aspect of our service, from vehicle cleanliness to customer interactions.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Professionalism</h3>
+          <p>Our team maintains the highest level of professionalism, ensuring a seamless and respectful experience.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">💎</div>
+          <h3>Luxury</h3>
+          <p>We believe every journey should be a premium experience, with attention to comfort and personal service.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ================= CTA SECTION ================= -->
   <section class="team-cta">
-    <h2>Ready to Experience Our Premium Service?</h2>
-    <p>Book your luxury transport with our professional team today</p>
-    <a href="index.html#bookings" class="cta-btn">Book Now</a>
+    <div class="container">
+      <h2>Ready to Experience Our Premium Service?</h2>
+      <p>Book your luxury transport with our professional team today</p>
+      <a href="index.html#bookings" class="cta-btn">Book Now</a>
+    </div>
   </section>
 
   <!-- ================= FOOTER ================= -->
@@ -151,6 +137,6 @@
   </footer>
 
   <!-- ================= SCRIPTS ================= -->
-  <script src="scripts/team.js" type="module"></script>
+  <script src="scripts/team.js"></script>
 </body>
 </html>

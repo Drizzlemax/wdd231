@@ -333,3 +333,14 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+.lazy-image {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.lazy-image.fade-in {
+  opacity: 1;
+}

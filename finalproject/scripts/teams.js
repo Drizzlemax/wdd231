@@ -1,21 +1,25 @@
 // Team page functionality
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Team page loaded'); // Debug log
+    console.log('Team page loaded');
     initializeTeamPage();
 });
 
 // Initialize the team page
 function initializeTeamPage() {
-    // Load team data from JSON
+    console.log('Initializing team page...');
+    
+    // Load team data
     fetchTeamData()
         .then(teamData => {
-            console.log('Team data loaded:', teamData);
+            console.log('Team data received:', teamData);
             populateTeamMembers(teamData);
             setupEventListeners();
         })
         .catch(error => {
             console.error('Error loading team data:', error);
+            // Use fallback data
             const fallbackData = getFallbackTeamData();
+            console.log('Using fallback data:', fallbackData);
             populateTeamMembers(fallbackData);
             setupEventListeners();
         });
@@ -24,20 +28,31 @@ function initializeTeamPage() {
 // Fetch team data from JSON file
 async function fetchTeamData() {
     try {
+        console.log('Fetching team data from: data/services.json');
         const response = await fetch('data/services.json');
+        
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
+        
         const data = await response.json();
-        return data.team || [];
+        console.log('Raw JSON data:', data);
+        
+        if (!data.team) {
+            throw new Error('No team data found in JSON');
+        }
+        
+        return data.team;
     } catch (error) {
         console.error('Failed to fetch team data:', error);
         throw error;
     }
 }
 
-// Setup event listeners for the page
+// Setup event listeners
 function setupEventListeners() {
+    console.log('Setting up event listeners...');
+    
     // Filter buttons
     const filterButtons = document.querySelectorAll('.tab-btn');
     filterButtons.forEach(button => {
@@ -53,6 +68,8 @@ function setupEventListeners() {
             navLinks.classList.toggle('active');
         });
     }
+    
+    console.log('Event listeners setup complete');
 }
 
 // Handle filter button clicks
@@ -72,12 +89,13 @@ function handleFilterClick(event) {
 // Populate team members in the container
 function populateTeamMembers(teamMembers) {
     const teamContainer = document.getElementById('team-container');
+    
     if (!teamContainer) {
         console.error('Team container not found!');
         return;
     }
 
-    console.log('Populating team members:', teamMembers.length);
+    console.log('Populating team members:', teamMembers);
     teamContainer.innerHTML = ''; // Clear existing content
 
     if (!teamMembers || teamMembers.length === 0) {
@@ -89,6 +107,8 @@ function populateTeamMembers(teamMembers) {
         const memberElement = createTeamMemberElement(member);
         teamContainer.appendChild(memberElement);
     });
+    
+    console.log('Team members populated successfully');
 }
 
 // Create HTML element for a team member
@@ -150,7 +170,7 @@ function filterTeamMembers(category) {
     });
 }
 
-// Fallback data in case JSON fetch fails
+// Fallback team data
 function getFallbackTeamData() {
     return [
         {
@@ -194,34 +214,6 @@ function getFallbackTeamData() {
                 "languages": "English, Xhosa",
                 "specialties": "Scenic Tours, Historical Sites"
             }
-        },
-        {
-            "id": 4,
-            "name": "James Wilson",
-            "role": "CEO & Founder",
-            "bio": "James founded LinkCar Shuttles with a vision to redefine luxury transport in Cape Town. His extensive experience in the hospitality industry ensures we maintain the highest standards of service.",
-            "image": "images/team/ceo.jpg",
-            "category": "management",
-            "experience": "15+ years in luxury transport",
-            "details": {
-                "certifications": "Tourism Grading Council, PRDP",
-                "languages": "English, Afrikaans",
-                "specialties": "Business Strategy, Hospitality Standards"
-            }
-        },
-        {
-            "id": 5,
-            "name": "Sarah Johnson",
-            "role": "Operations Manager",
-            "bio": "Sarah ensures every journey runs smoothly, coordinating our fleet and managing schedules with precision. Her background in logistics guarantees efficient and reliable service.",
-            "image": "images/team/operations.jpg",
-            "category": "management",
-            "experience": "10+ years in transport logistics",
-            "details": {
-                "certifications": "Advanced Transport Management",
-                "languages": "English",
-                "specialties": "Fleet Management, Route Planning"
-            }
         }
     ];
-} 
+}

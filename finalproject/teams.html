@@ -26,7 +26,7 @@
   <header>
     <nav class="navbar">
       <div class="logo">
-        <a href="index.html">
+        <a href="index.html" class="logo-container">
           <img src="images/logo.png" alt="LinkCar Shuttles Logo">
         </a>
       </div>
@@ -70,7 +70,8 @@
   <!-- ================= TEAM MEMBERS ================= -->
   <section class="team-members">
     <div id="team-container" class="team-container">
-      <!-- Team members will be populated by JavaScript -->
+      <!-- Team members will be loaded by JavaScript -->
+      <div class="loading-message">Loading team members...</div>
     </div>
   </section>
 
@@ -106,19 +107,19 @@
     <h2>Our Certifications</h2>
     <div class="certs-container">
       <div class="cert-item">
-        <img src="images/cert1.png" alt="Tourism Grading Council">
+        <img src="images/cert1.png" alt="Tourism Grading Council" onerror="this.style.display='none'">
         <p>Tourism Grading Council</p>
       </div>
       <div class="cert-item">
-        <img src="images/cert2.png" alt="PRDP Certified">
+        <img src="images/cert2.png" alt="PRDP Certified" onerror="this.style.display='none'">
         <p>PRDP Certified</p>
       </div>
       <div class="cert-item">
-        <img src="images/cert3.png" alt="Defensive Driving Certified">
+        <img src="images/cert3.png" alt="Defensive Driving Certified" onerror="this.style.display='none'">
         <p>Defensive Driving Certified</p>
       </div>
       <div class="cert-item">
-        <img src="images/cert4.png" alt="First Aid Trained">
+        <img src="images/cert4.png" alt="First Aid Trained" onerror="this.style.display='none'">
         <p>First Aid Trained</p>
       </div>
     </div>

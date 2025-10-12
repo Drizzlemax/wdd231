@@ -34,46 +34,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Fetch team data from JSON file
 function fetchTeamData() {
-    // Try multiple possible paths for the JSON file
-    const possiblePaths = [
-        'data/services.json',
-        '../data/services.json',
-        './data/services.json',
-        'services.json'
-    ];
-    
-    let fetchAttempts = 0;
-    
-    function tryFetch(pathIndex) {
-        if (pathIndex >= possiblePaths.length) {
-            console.error('All fetch attempts failed');
+    // Since your JSON is in the data folder and team.html is in root
+    // The correct path is 'data/services.json'
+    fetch('data/services.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Team data loaded successfully!');
+            console.log('Team members found:', data.team.length);
+            populateTeamMembers(data.team);
+        })
+        .catch(error => {
+            console.error('Error fetching team data:', error);
+            console.log('Using fallback team data');
             loadFallbackTeamData();
-            return;
-        }
-        
-        const path = possiblePaths[pathIndex];
-        console.log(`Trying to fetch from: ${path}`);
-        
-        fetch(path)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Team data loaded successfully from:', path);
-                console.log('Team data:', data.team);
-                populateTeamMembers(data.team);
-            })
-            .catch(error => {
-                console.error(`Error fetching from ${path}:`, error);
-                fetchAttempts++;
-                tryFetch(fetchAttempts);
-            });
-    }
-    
-    tryFetch(0);
+        });
 }
 
 // Fallback team data if JSON fetch fails
@@ -149,6 +128,76 @@ function loadFallbackTeamData() {
                 "certifications": "Advanced Transport Management",
                 "languages": "English",
                 "specialties": "Fleet Management, Route Planning"
+            }
+        },
+        {
+            "id": 6,
+            "name": "Michael Brown",
+            "role": "Senior Chauffeur",
+            "bio": "Michael is one of our most experienced chauffeurs, known for his exceptional knowledge of Cape Town and his commitment to passenger comfort and safety.",
+            "image": "images/team/driver1.jpg",
+            "category": "drivers",
+            "experience": "8+ years professional driving",
+            "details": {
+                "certifications": "Defensive Driving, First Aid",
+                "languages": "English, Afrikaans",
+                "specialties": "Wine Tours, Airport Transfers"
+            }
+        },
+        {
+            "id": 7,
+            "name": "David Williams",
+            "role": "Luxury Tour Specialist",
+            "bio": "David combines his passion for Cape Town's beauty with his expertise in luxury service to create unforgettable tour experiences for our clients.",
+            "image": "images/team/driver2.jpg",
+            "category": "drivers",
+            "experience": "12+ years in tourism",
+            "details": {
+                "certifications": "Tour Guide, Hospitality",
+                "languages": "English, French",
+                "specialties": "Peninsula Tours, Historical Sites"
+            }
+        },
+        {
+            "id": 8,
+            "name": "Robert Green",
+            "role": "Corporate Transport Expert",
+            "bio": "Robert specializes in corporate travel, understanding the unique needs of business clients and ensuring punctuality and professionalism at all times.",
+            "image": "images/team/driver3.jpg",
+            "category": "drivers",
+            "experience": "6+ years corporate service",
+            "details": {
+                "certifications": "Business Etiquette, Advanced Driving",
+                "languages": "English",
+                "specialties": "Executive Transfers, Conference Transport"
+            }
+        },
+        {
+            "id": 9,
+            "name": "Lisa Martinez",
+            "role": "Customer Service Manager",
+            "bio": "Lisa leads our customer service team, ensuring every client interaction is handled with care, professionalism, and attention to detail.",
+            "image": "images/team/support1.jpg",
+            "category": "support",
+            "experience": "7+ years in customer relations",
+            "details": {
+                "certifications": "Customer Service Excellence",
+                "languages": "English, Spanish, Afrikaans",
+                "specialties": "Client Relations, Service Quality"
+            }
+        },
+        {
+            "id": 10,
+            "name": "Thomas Clark",
+            "role": "Booking Coordinator",
+            "bio": "Thomas manages our booking system, ensuring all reservations are accurately recorded and our clients receive timely confirmations and updates.",
+            "image": "images/team/support2.jpg",
+            "category": "support",
+            "experience": "5+ years in reservation systems",
+            "details": {
+                "certifications": "Hospitality Management",
+                "languages": "English",
+                "specialties": "Reservation Systems, Itinerary Planning"
             }
         }
     ];

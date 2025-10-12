@@ -4,359 +4,368 @@
 
 /* Team Hero Section */
 .team-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-              url('../images/team-hero-bg.jpg') center/cover no-repeat;
-  text-align: center;
-  padding: 6rem 1rem;
-  color: var(--white);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../images/team-hero-bg.jpg') center/cover no-repeat;
+    text-align: center;
+    padding: 6rem 1rem;
+    color: var(--white);
 }
 
 .team-hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  color: var(--gold);
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: var(--gold);
 }
 
 .team-hero p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto 2rem;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
 }
 
 /* Team Introduction */
 .team-intro {
-  text-align: center;
-  padding: 3rem 2rem;
-  max-width: 900px;
-  margin: 0 auto;
+    text-align: center;
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .team-intro h2 {
-  color: var(--gold);
-  margin-bottom: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
 }
 
 .team-intro p {
-  margin-bottom: 1.5rem;
-  line-height: 1.8;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
 }
 
 /* Team Categories */
 .team-categories {
-  padding: 2rem 1rem;
-  text-align: center;
+    padding: 2rem 1rem;
+    text-align: center;
 }
 
 .category-tabs {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .tab-btn {
-  background: var(--navy);
-  color: var(--white);
-  border: 1px solid var(--gold);
-  border-radius: 5px;
-  padding: 0.7rem 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 500;
+    background: var(--navy);
+    color: var(--white);
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .tab-btn:hover {
-  background: rgba(214, 164, 99, 0.2);
+    background: rgba(214, 164, 99, 0.2);
 }
 
 .tab-btn.active {
-  background: var(--gold);
-  color: var(--black);
+    background: var(--gold);
+    color: var(--black);
 }
 
 /* Team Members Grid */
 .team-members {
-  padding: 2rem 1rem;
+    padding: 2rem 1rem;
 }
 
 .team-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
 }
 
 .team-member {
-  background: var(--navy);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
+    background: var(--navy);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .team-member:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(214, 164, 99, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(214, 164, 99, 0.2);
 }
 
 .member-image {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
+    position: relative;
+    height: 250px;
+    overflow: hidden;
 }
 
 .member-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
 .team-member:hover .member-image img {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .member-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .team-member:hover .member-overlay {
-  opacity: 1;
+    opacity: 1;
 }
 
 .social-links {
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .social-links a img {
-  width: 24px;
-  filter: brightness(0) invert(1);
-  transition: transform 0.3s ease;
+    width: 24px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
 }
 
 .social-links a:hover img {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .member-info {
-  padding: 1.5rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .member-info h3 {
-  color: var(--gold);
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
 }
 
 .role {
-  font-weight: 600;
-  color: var(--white);
-  margin-bottom: 0.3rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.3rem;
 }
 
 .experience {
-  color: var(--gold);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  font-style: italic;
+    color: var(--gold);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-style: italic;
 }
 
 .bio {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  flex-grow: 1;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
 }
 
 .member-details {
-  border-top: 1px solid rgba(214, 164, 99, 0.3);
-  padding-top: 1rem;
+    border-top: 1px solid rgba(214, 164, 99, 0.3);
+    padding-top: 1rem;
 }
 
 .detail-item {
-  display: flex;
-  margin-bottom: 0.5rem;
+    display: flex;
+    margin-bottom: 0.5rem;
 }
 
 .detail-label {
-  font-weight: 600;
-  color: var(--gold);
-  min-width: 120px;
+    font-weight: 600;
+    color: var(--gold);
+    min-width: 120px;
 }
 
 .detail-value {
-  color: var(--white);
+    color: var(--white);
+}
+
+/* Loading and Error Messages */
+.loading-message, .error-message {
+    text-align: center;
+    padding: 2rem;
+    color: var(--gold);
+    font-size: 1.1rem;
+    grid-column: 1 / -1;
 }
 
 /* Company Values */
 .company-values {
-  padding: 4rem 1rem;
-  background: var(--black);
-  text-align: center;
+    padding: 4rem 1rem;
+    background: var(--black);
+    text-align: center;
 }
 
 .company-values h2 {
-  color: var(--gold);
-  margin-bottom: 2rem;
+    color: var(--gold);
+    margin-bottom: 2rem;
 }
 
 .values-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
 }
 
 .value-card {
-  background: var(--navy);
-  border: 1px solid var(--gold);
-  border-radius: 10px;
-  padding: 2rem 1.5rem;
-  transition: transform 0.3s ease;
+    background: var(--navy);
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease;
 }
 
 .value-card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .value-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .value-card h3 {
-  color: var(--gold);
-  margin-bottom: 1rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
 }
 
 .value-card p {
-  line-height: 1.6;
+    line-height: 1.6;
 }
 
 /* Certifications */
 .certifications {
-  padding: 4rem 1rem;
-  text-align: center;
+    padding: 4rem 1rem;
+    text-align: center;
 }
 
 .certifications h2 {
-  color: var(--gold);
-  margin-bottom: 2rem;
+    color: var(--gold);
+    margin-bottom: 2rem;
 }
 
 .certs-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
 }
 
 .cert-item {
-  background: var(--navy);
-  border-radius: 10px;
-  padding: 1.5rem;
-  transition: transform 0.3s ease;
+    background: var(--navy);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
 }
 
 .cert-item:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .cert-item img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 1rem;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1rem;
 }
 
 .cert-item p {
-  font-weight: 600;
-  color: var(--gold);
+    font-weight: 600;
+    color: var(--gold);
 }
 
 /* Team CTA */
 .team-cta {
-  background: var(--navy);
-  text-align: center;
-  padding: 4rem 1rem;
-  border-top: 1px solid var(--gold);
+    background: var(--navy);
+    text-align: center;
+    padding: 4rem 1rem;
+    border-top: 1px solid var(--gold);
 }
 
 .team-cta h2 {
-  color: var(--gold);
-  margin-bottom: 1rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
 }
 
 .team-cta p {
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .team-hero h1 {
-    font-size: 2.2rem;
-  }
-  
-  .team-container {
-    grid-template-columns: 1fr;
-  }
-  
-  .category-tabs {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .tab-btn {
-    width: 200px;
-  }
-  
-  .detail-item {
-    flex-direction: column;
-  }
-  
-  .detail-label {
-    min-width: auto;
-    margin-bottom: 0.3rem;
-  }
+    .team-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-btn {
+        width: 200px;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+    }
+    
+    .detail-label {
+        min-width: auto;
+        margin-bottom: 0.3rem;
+    }
 }
 
 @media (max-width: 480px) {
-  .team-hero {
-    padding: 4rem 1rem;
-  }
-  
-  .team-hero h1 {
-    font-size: 1.8rem;
-  }
-  
-  .team-hero p {
-    font-size: 1rem;
-  }
-  
-  .values-container {
-    grid-template-columns: 1fr;
-  }
-  
-  .certs-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .team-hero {
+        padding: 4rem 1rem;
+    }
+    
+    .team-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .team-hero p {
+        font-size: 1rem;
+    }
+    
+    .values-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .certs-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

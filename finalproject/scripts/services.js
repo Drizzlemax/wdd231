@@ -14,7 +14,6 @@ function initializeServicesPage() {
         })
         .catch(error => {
             console.error('Error loading services data:', error);
-            // Fallback to static data if fetch fails
             const fallbackData = getFallbackServicesData();
             populateServices(fallbackData);
             populatePricingTable(fallbackData);
@@ -25,7 +24,7 @@ function initializeServicesPage() {
 // Fetch services data from JSON file
 async function fetchServicesData() {
     try {
-        const response = await fetch('data.json');
+        const response = await fetch('services.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

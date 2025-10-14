@@ -46,24 +46,24 @@ function getTeamData() {
         },
         {
             "id": 3,
-            "name": "Brian Ncube",
+            "name": "Brittney Coleman",
             "role": "Tour Guide",
             "bio": "A Cape Town native with deep local knowledge — your perfect guide for scenic adventures.",
-            "image": "images/aishaife3.webp",
+            "image": "images/melllanieexx-14102025-000113.webp",
             "category": "drivers",
             "experience": "8+ years in tourism",
             "details": {
                 "certifications": "Tour Guide, Hospitality",
-                "languages": "English, Xhosa",
-                "specialties": "Scenic Tours, Historical Sites"
+                "languages": "English, French",
+                "specialties": "Scenic & Safari Tours, Historical Sites"
             }
         },
         {
             "id": 4,
-            "name": "James Wilson",
+            "name": "Johan De Waal",
             "role": "CEO & Founder",
             "bio": "James founded LinkCar Shuttles with a vision to redefine luxury transport in Cape Town. His extensive experience in the hospitality industry ensures we maintain the highest standards of service.",
-            "image": "images/team/ceo.jpg",
+            "image": "images/christopher_obetz-14102025-000114.webp",
             "category": "management",
             "experience": "15+ years in luxury transport",
             "details": {
@@ -77,7 +77,7 @@ function getTeamData() {
             "name": "Sarah Johnson",
             "role": "Operations Manager",
             "bio": "Sarah ensures every journey runs smoothly, coordinating our fleet and managing schedules with precision. Her background in logistics guarantees efficient and reliable service.",
-            "image": "images/team/operations.jpg",
+            "image": "images/issam_ben_abdallah-12102025-000223.webp",
             "category": "management",
             "experience": "10+ years in transport logistics",
             "details": {
@@ -91,7 +91,7 @@ function getTeamData() {
             "name": "Michael Brown",
             "role": "Senior Chauffeur",
             "bio": "Michael is one of our most experienced chauffeurs, known for his exceptional knowledge of Cape Town and his commitment to passenger comfort and safety.",
-            "image": "images/team/driver1.jpg",
+            "image": "images/socialpeople.co-12102025-0001.webp",
             "category": "drivers",
             "experience": "8+ years professional driving",
             "details": {
@@ -105,7 +105,7 @@ function getTeamData() {
             "name": "David Williams",
             "role": "Luxury Tour Specialist",
             "bio": "David combines his passion for Cape Town's beauty with his expertise in luxury service to create unforgettable tour experiences for our clients.",
-            "image": "images/team/driver2.jpg",
+            "image": "images/jeremyturnerfitness-14102025-000115.webp",
             "category": "drivers",
             "experience": "12+ years in tourism",
             "details": {
@@ -116,10 +116,10 @@ function getTeamData() {
         },
         {
             "id": 8,
-            "name": "Robert Green",
+            "name": "Robert Nyathi",
             "role": "Corporate Transport Expert",
             "bio": "Robert specializes in corporate travel, understanding the unique needs of business clients and ensuring punctuality and professionalism at all times.",
-            "image": "images/team/driver3.jpg",
+            "image": "images/lawrence.of.law-14102025-000119.webp",
             "category": "drivers",
             "experience": "6+ years corporate service",
             "details": {
@@ -133,7 +133,7 @@ function getTeamData() {
             "name": "Lisa Martinez",
             "role": "Customer Service Manager",
             "bio": "Lisa leads our customer service team, ensuring every client interaction is handled with care, professionalism, and attention to detail.",
-            "image": "images/team/support1.jpg",
+            "image": "images/issam_ben_abdallah-12102025-000124.webp",
             "category": "support",
             "experience": "7+ years in customer relations",
             "details": {
@@ -147,7 +147,7 @@ function getTeamData() {
             "name": "Thomas Clark",
             "role": "Booking Coordinator",
             "bio": "Thomas manages our booking system, ensuring all reservations are accurately recorded and our clients receive timely confirmations and updates.",
-            "image": "images/team/support2.jpg",
+            "image": "images/masoodnaibphotography-14102025-000116.webp",
             "category": "support",
             "experience": "5+ years in reservation systems",
             "details": {

@@ -5,7 +5,7 @@
 /* Services Hero Section */
 .services-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-              url('../images/services-hero-bg.jpg') center/cover no-repeat;
+              url('../images/findmyza-14102025-000104.webp') center/cover no-repeat;
   text-align: center;
   padding: 6rem 1rem;
   color: var(--white);
@@ -478,4 +478,21 @@
   .features-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: var(--primary-color, );
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--accent-color, );
+  transform: scale(1.2);
 }

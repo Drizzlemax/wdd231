@@ -269,8 +269,8 @@ section h2::after {
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: var(--shadow);
     transition: var(--transition);
+    text-decoration-color: #777;
 }
 
 .project-card:hover {
@@ -283,8 +283,8 @@ section h2::after {
 
 .project-info {
     padding: 1.5rem;
-    color:rgb(238, 240, 234);
-    -webkit-text-stroke: 2px #000000;
+    color:black;
+    
     
 }
 

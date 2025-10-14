@@ -9,14 +9,15 @@
   <meta property="og:title" content="LinkCar Shuttles | Luxury Transport in Cape Town">
   <meta property="og:description" content="Luxury Shuttle Services • Private Tours • Airport Transfers.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/logo.png">
+  <meta property="og:image" content="images/linkcar-black.webp">
 
   <!-- ===== TITLE & FAVICON ===== -->
-  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="icon" href="images/linkcar-white.png" type="image/png">
   <title>LinkCar Shuttles | Luxury Transport in Cape Town</title>
 
   <!-- ===== STYLES ===== -->
   <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/gallery.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -25,13 +26,16 @@
   <header>
     <nav class="navbar">
       <div class="logo">
-        <img src="images/logo.png" alt="LinkCar Shuttles Logo">
+        <a href="index.html" class="logo-container">
+          <img src="images/linkcar-white.png" alt="LinkCar Shuttles Logo">
+        </a>
       </div>
       <button class="hamburger" id="hamburger">☰</button>
       <ul class="nav-links" id="nav-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="team.html">Meet the Team</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#bookings">Bookings</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -41,82 +45,245 @@
   <!-- ================= HERO ================= -->
   <section id="hero" class="hero-section">
     <div class="hero-content">
-      <img src="images/logo.png" alt="LinkCar Logo" class="hero-logo">
+      <div class="logo-container">
+        <img src="images/linkcar-black.webp" alt="LinkCar Logo" >
+      </div>
       <h1>Luxury Shuttle Services in Cape Town</h1>
       <p>Chauffeured Rides • Private Tours • Airport Transfers</p>
       <a href="#bookings" class="cta-btn">Book Now</a>
     </div>
   </section>
 
-  <!-- ================= SERVICES ================= -->
-  <section id="services" class="content-section">
-    <h2>Our Services</h2>
-    <div id="services-container" class="grid-container"></div>
+  <!-- ================= GALLERY ================= -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <h2>Our Gallery</h2>
+      <p class="gallery-subtitle">Experience the luxury and comfort of our premium transport services</p>
+      
+      <!-- Gallery Filter -->
+      <div class="gallery-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="vehicles">Our Fleet</button>
+        <button class="filter-btn" data-filter="tours">Tours</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="airport">Airport Transfers</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Gallery items will be populated by JavaScript -->
+      </div>
+
+      <!-- Load More Button -->
+      <div class="load-more-container">
+        <button class="cta-btn secondary" id="load-more">Load More</button>
+      </div>
+    </div>
   </section>
 
-  <!-- ================= TEAM ================= -->
-  <section id="team" class="content-section">
-    <h2>Meet the Team</h2>
-    <div id="team-container" class="grid-container"></div>
+  <!-- ================= FEATURED POSTS ================= -->
+  <section class="featured-posts">
+    <div class="container">
+      <h2>Latest Updates</h2>
+      <div class="posts-grid">
+        <article class="post-card">
+          <div class="post-image">
+            <img src="images/gallery/new-fleet.jpg" alt="New Fleet Addition">
+            <div class="post-date">Mar 15, 2024</div>
+          </div>
+          <div class="post-content">
+            <h3>New Luxury Fleet Addition</h3>
+            <p>We've added brand new Mercedes-Benz V-Class vehicles to our fleet, offering enhanced comfort and style for your travels.</p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="post-image">
+            <img src="images/gallery/cape-town-tour.jpg" alt="Cape Town Tour">
+            <div class="post-date">Feb 28, 2024</div>
+          </div>
+          <div class="post-content">
+            <h3>Summer Tour Special</h3>
+            <p>Book our Cape Peninsula tour and get 15% off. Experience the breathtaking beauty of Chapman's Peak and Cape Point.</p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="post-image">
+            <img src="images/gallery/corporate-event.jpg" alt="Corporate Event">
+            <div class="post-date">Feb 15, 2024</div>
+          </div>
+          <div class="post-content">
+            <h3>Corporate Event Success</h3>
+            <p>Successfully transported 200+ delegates for the International Business Conference. Reliable, punctual, professional.</p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
   <!-- ================= BOOKINGS ================= -->
   <section id="bookings" class="content-section">
-    <h2>Bookings Calendar</h2>
-    <div id="calendar-container" class="calendar"></div>
+    <h2>Book Your Luxury Ride</h2>
+    <div class="booking-container">
+      <div class="booking-info">
+        <h3>Why Choose LinkCar?</h3>
+        <ul class="features-list">
+          <li>✅ Luxury vehicles maintained to highest standards</li>
+          <li>✅ Professional, certified chauffeurs</li>
+          <li>✅ 24/7 customer support</li>
+          <li>✅ Competitive pricing</li>
+          <li>✅ Punctual and reliable service</li>
+        </ul>
+      </div>
 
-    <!-- Booking Form -->
-    <form id="booking-form" class="booking-form">
-      <h3>Make a Booking</h3>
-      
-      <label for="name">Full Name</label>
-      <input type="text" id="name" placeholder="Enter your full name" required>
+      <!-- Booking Form -->
+      <form id="booking-form" class="booking-form">
+        <h3>Make a Booking</h3>
+        
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required>
+        </div>
 
-      <label for="service">Service Type</label>
-      <select id="service" required>
-        <option value="">Select a service</option>
-        <option value="Airport Transfer">Airport Transfer</option>
-        <option value="Private Tour">Private Tour</option>
-        <option value="Corporate Travel">Corporate Travel</option>
-      </select>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
 
-      <label for="date">Date</label>
-      <input type="date" id="date" required>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        </div>
 
-      <label for="time">Time</label>
-      <input type="time" id="time" required>
+        <div class="form-group">
+          <label for="service">Service Type</label>
+          <select id="service" required>
+            <option value="">Select a service</option>
+            <option value="Airport Transfer">Airport Transfer</option>
+            <option value="Private Tour">Private Tour</option>
+            <option value="Corporate Travel">Corporate Travel</option>
+            <option value="Hotel Transfer">Hotel Transfer</option>
+            <option value="Event Transport">Event Transport</option>
+          </select>
+        </div>
 
-      <button type="submit" class="cta-btn">Confirm Booking</button>
-    </form>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+          </div>
+          <div class="form-group">
+            <label for="time">Time</label>
+            <input type="time" id="time" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="passengers">Number of Passengers</label>
+          <select id="passengers">
+            <option value="1">1 Passenger</option>
+            <option value="2">2 Passengers</option>
+            <option value="3">3 Passengers</option>
+            <option value="4">4 Passengers</option>
+            <option value="5+">5+ Passengers</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Special Requirements</label>
+          <textarea id="message" placeholder="Any special requirements or notes..." rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="cta-btn">Confirm Booking</button>
+      </form>
+    </div>
   </section>
 
   <!-- ================= CONTACT ================= -->
   <section id="contact" class="content-section contact-section">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:bookings@linkcarshuttles.co.za">bookings@linkcarshuttles.co.za</a></p>
-    <p>Phone: <a href="tel:+27659101300">+27 65 910 1300</a></p>
-    <p>Location: Cape Town, South Africa</p>
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <div class="contact-item">
+            <strong>Email:</strong>
+            <a href="mailto:bookings@linkcarshuttles.co.za">bookings@linkcarshuttles.co.za</a>
+          </div>
+          <div class="contact-item">
+            <strong>Phone:</strong>
+            <a href="tel:+27659101300">+27 65 910 1300</a>
+          </div>
+          <div class="contact-item">
+            <strong>Location:</strong>
+            <span>Cape Town, South Africa</span>
+          </div>
+          <div class="contact-item">
+            <strong>Operating Hours:</strong>
+            <span>24/7 Service Available</span>
+          </div>
+        </div>
+        
+        <div class="quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="team.html">Meet Our Team</a></li>
+            <li><a href="#gallery">View Gallery</a></li>
+            <li><a href="#bookings">Make Booking</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ================= FOOTER ================= -->
   <footer>
-    <p>&copy; 2025 LinkCar Shuttles. All Rights Reserved.</p>
-    <div class="footer-links">
-      <a href="#hero">Home</a> |
-      <a href="services.html">Services</a> |
-      <a href="#team">Team</a> |
-      <a href="#bookings">Bookings</a> |
-      <a href="#contact">Contact</a>
+    <div class="container">
+      <p>&copy; 2025 LinkCar Shuttles. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#hero">Home</a> |
+        <a href="services.html">Services</a> |
+        <a href="team.html">Team</a> |
+        <a href="#gallery">Gallery</a> |
+        <a href="#bookings">Bookings</a> |
+        <a href="#contact">Contact</a>
+      </div>
+         <div class="social-icons">
+  
+    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+      <!
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+      <!-- Twitter/X SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.5 11.24H16.27l-5.282-6.938-6.04 6.938H1.64l7.73-8.885L1.14 2.25h6.308l4.77 6.268 6.026-6.268z"/>
+      </svg>
+    </a>
+
+    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <!-- LinkedIn SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.763 0 5-2.24 5-5v-14c0-2.76-2.237-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.792-1.75-1.764 0-.973.784-1.764 1.75-1.764s1.75.791 1.75 1.764c0 .972-.784 1.764-1.75 1.764zm13.5 11.268h-3v-5.356c0-1.276-.025-2.918-1.778-2.918-1.78 0-2.05 1.387-2.05 2.82v5.454h-3v-10h2.88v1.367h.041c.401-.757 1.381-1.555 2.843-1.555 3.042 0 3.604 2.005 3.604 4.617v5.571z"/>
+      </svg>
+    </a>
+
+    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+      <!-- Instagram SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.206.056 2.003.246 2.466.415.596.218 1.022.479 1.47.927.448.448.709.874.927 1.47.169.463.359 1.26.415 2.466.058 1.266.07 1.646.07 4.849s-.012 3.584-.07 4.849c-.056 1.206-.246 2.003-.415 2.466-.218.596-.479 1.022-.927 1.47-.448.448-.874.709-1.47.927-.463.169-1.26.359-2.466.415-1.266.058-1.646.07-4.85.07s-3.584-.012-4.849-.07c-1.206-.056-2.003-.246-2.466-.415-.596-.218-1.022-.479-1.47-.927-.448-.448-.709-.874-.927-1.47-.169-.463-.359-1.26-.415-2.466C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.849c.056-1.206.246-2.003.415-2.466.218-.596.479-1.022.927-1.47.448-.448.874-.709 1.47-.927.463-.169 1.26-.359 2.466-.415C8.416 2.175 8.796 2.163 12 2.163zm0 1.838c-3.17 0-3.548.012-4.796.07-.999.046-1.54.213-1.896.356-.478.185-.82.407-1.179.766-.359.359-.581.701-.766 1.179-.143.356-.31.897-.356 1.896-.058 1.248-.07 1.626-.07 4.796s.012 3.548.07 4.796c.046.999.213 1.54.356 1.896.185.478.407.82.766 1.179.359.359.701.581 1.179.766.356.143.897.31 1.896.356 1.248.058 1.626.07 4.796.07s3.548-.012 4.796-.07c.999-.046 1.54-.213 1.896-.356.478-.185.82-.407 1.179-.766.359-.359.581-.701.766-1.179.143-.356.31-.897.356-1.896.058-1.248.07-1.626.07-4.796s-.012-3.548-.07-4.796c-.046-.999-.213-1.54-.356-1.896-.185-.478-.407-.82-.766-1.179-.359-.359-.701-.581-1.179-.766-.356-.143-.897-.31-1.896-.356-1.248-.058-1.626-.07-4.796-.07zm0 3.838a5.999 5.999 0 110 12.001 5.999 5.999 0 010-12.001zm0 9.9a3.9 3.9 0 100-7.801 3.9 3.9 0 000 7.801zm6.406-10.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>
+      </svg>
+    </a>
     </div>
-    <div class="social-icons">
-      <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
-      <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
-      <a href="#"><img src="images/whatsapp.svg" alt="WhatsApp"></a>
+      <a href="https://youtube.com" target="_blank" class="video-link">🎥 View Demo Video</a>
     </div>
-    <a href="https://youtube.com" target="_blank" class="video-link">🎥 View Demo Video</a>
   </footer>
 
   <!-- ================= SCRIPTS ================= -->
   <script src="scripts/index.js"></script>
+  <script src="scripts/gallery.js"></script>
 </body>
 </html>
